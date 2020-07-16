@@ -115,7 +115,7 @@ for test in $_TESTS; do
             sysbench ${test_path} --db-driver=mysql --threads=$threads \
                 --tables=$_TABLES --table-size=$size --mysql-host=$_MYSQL_HOST \
                 --mysql-user=$_MYSQL_USER --mysql-password=$_MYSQL_PASSWORD \
-                --verbosity=0 --report-interval=10 --time=$_DURATION "$@" run | tee $_EXP_NAME.thr.$threads.sz.$size.test.$test.txt
+                --verbosity=4 --report-interval=10 --time=$_DURATION "$@" run | tee $_EXP_NAME.thr.$threads.sz.$size.test.$test.txt
 
 
             if [[ ! -z $_LOG_QUERIES ]]; then
